@@ -25,7 +25,7 @@ mailListener.on("mail", function (mail, seqno, attributes) {
 	var fromEmail = mail.text.substring(firstIndex, mail.text.indexOf("\n", firstIndex + 1));
 	var toEmail = mail.to[0].address;
 
-	if(config.aliases.includes(toEmail)) {
+	if(config.aliases[toEmail] != undefined) {
 		var data = {
 			json: {
 				text: 
