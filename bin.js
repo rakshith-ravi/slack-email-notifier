@@ -40,7 +40,7 @@ The mail contents are as follows:
 				channel: config.aliases[toEmail],
 				attachments: [
 					{
-						text: mail.text.substring(mail.text.indexOf(searchString) - 6)
+						text: mail.text
 					}
 				]
 			}
