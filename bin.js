@@ -20,6 +20,7 @@ mailListener.on("server:connected", function () {
 });
 
 mailListener.on("mail", function (mail, seqno, attributes) {
+	console.info(mail.text);
 	var searchString = "---------- Forwarded message ----------\nFrom: ";
 	var firstIndex = mail.text.indexOf(searchString) + searchString.length;
 	var fromEmail = mail.text.substring(firstIndex, mail.text.indexOf("\n", firstIndex + 1));
