@@ -20,8 +20,8 @@ mailListener.on("server:connected", function () {
 });
 
 mailListener.on("mail", function (mail, seqno, attributes) {
-	var fromEmail = mail.headers.from.address;
-	var toEmail = mail.headers.to.address;
+	var fromEmail = mail.from.address;
+	var toEmail = mail.to.address;
 
 	if(config.aliases[toEmail] != undefined) {
 		var data = {
